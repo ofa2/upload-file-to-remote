@@ -10,9 +10,9 @@ async function lift(this: any) {
     qiniu.call(this);
 
     this.uploadFileToRemote = { uploadBuffer: this.qiniu.uploadBuffer.bind(this.qiniu) };
+  } else {
+    throw new Error('no support adapter');
   }
-
-  throw new Error('no support adapter');
 }
 
 export { lift };
