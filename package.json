@@ -16,8 +16,8 @@
     "d-ts": "./node_modules/.bin/ts-node --project tsconfig.json --files config/declaration/index.ts"
   },
   "dependencies": {
-    "@ofa2/azure-blob": "^0.1.1",
-    "@ofa2/qiniu": "^0.1.1",
+    "@ofa2/azure-blob": "^0.2.0",
+    "@ofa2/qiniu": "^0.2.0",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
