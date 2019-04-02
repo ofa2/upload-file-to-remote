@@ -2,7 +2,7 @@
 
 ## how to use
 
-- add next config to `config/env/xxx`
+- add next config to `config/env/xxx` (choose one)
 
 ```js
 {
@@ -11,7 +11,7 @@
     accountKey: '',
     containerName: '',
     baseUrl: 'https://xxxx.blob.core.chinacloudapi.cn',
-    fileKeyPrefix: 'dev',
+    fileKeyPrefix: '',
   },
 
   qiniu: {
@@ -27,14 +27,18 @@
 - add next to `index.ts`
 
 ```js
-import fileUploadToRemote from '@ofa2/upload-file-to-remote';
+import uploadFileToRemote from '@ofa2/upload-file-to-remote';
 
-new Ofa2(__dirname)
-  .use(config)
-  .use(fileUploadToRemote);
+new Ofa2(__dirname).use(config).use(uploadFileToRemote);
 ```
 
-## difference config
+- add next when u upload
+
+```js
+await framework.uploadFileToRemote.uploadBuffer('fileKey', buffer);
+```
+
+## config difference
 
 |                | 七牛          | azure blob    |
 | -------------- | ------------- | ------------- |
